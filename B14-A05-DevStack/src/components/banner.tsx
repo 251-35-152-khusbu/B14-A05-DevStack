@@ -2,7 +2,7 @@
 import banner from '../assets/banner-stack.png'
 const Banner = () => {
     return (
-        <div className="bg-white-800 grid grid-cols-2 items-center gap-4 container mx-auto">
+        <div className="bg-white grid  grid-cols-1 lg:grid-cols-2 items-center gap-4 container mx-auto">
             <section className="flex flex-col gap-4">
                 <h1 className="text-6xl font-bold text-gray-800">Build Your Ideal
                                <span className=" bg-clip-text text-transparent bg-linear-to-r from-orange-600 to-purple-600 "> Development Stack</span></h1>

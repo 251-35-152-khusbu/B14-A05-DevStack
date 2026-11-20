@@ -3,7 +3,7 @@ import { FaBars } from "react-icons/fa";
 
 const Nav = () => {
     return (
-        <div className="bg-white-800">
+        <div className="bg-white">
             <div className=" container mx-auto grid grid-cols-3 items-center">
                <div className="md:hidden">
 
@@ -24,7 +24,7 @@ const Nav = () => {
 
 </div>
              <img src={logo} className="logo" alt="Logo" />
-            <ul className=" hidden lg:flex justify-center items-center gap-8 text-medium font-semibold hover:pointer-coarse:bg-pink-400">
+            <ul className=" hidden lg:flex justify-center items-center gap-8 text-black text-medium font-semibold hover:pointer-coarse:bg-pink-400">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#technology">Technology</a></li>
                 <li><a href="#projects">Projects</a></li>
