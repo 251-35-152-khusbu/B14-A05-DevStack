@@ -1,0 +1,11 @@
+# The Vite + React app lives in the B14-A05-DevStack/ subfolder, but some of its
+# imports (react-icons, react-toastify) are only declared in the root
+# package.json. Netlify installs the root dependencies automatically; the
+# command below then installs the app's own dependencies and builds it.
+[build]
+  command = "npm ci --prefix B14-A05-DevStack && npm run build --prefix B14-A05-DevStack"
+  publish = "B14-A05-DevStack/dist"
+
+[build.environment]
+  # Vite 8 / Rolldown require Node ^20.19 or >=22.12
+  NODE_VERSION = "24"
