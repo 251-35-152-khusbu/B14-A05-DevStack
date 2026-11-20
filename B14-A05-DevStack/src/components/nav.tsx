@@ -33,7 +33,7 @@ const Nav = () => {
             </ul>
 
            <section className="flex justify-end items-center gap-4 mt-2.5">
-            <button type="button" className=" bg-gray- border border-black-200 hover:bg-pink-600 transition-shadow cursor-pointer border-none text-black font-bold py-2 px-4 rounded-2xl">
+            <button type="button" className=" bg-gray-200 border border-black-200 hover:bg-pink-600 transition-shadow cursor-pointer border-none text-black font-bold py-2 px-4 rounded-2xl">
                 SignIn
             </button>
             <button type="button" className=" bg-gray-200 border border-black-200 hover:bg-pink-600 transition-shadow cursor-pointer border-none text-black font-bold py-2 px-4 rounded-2xl">

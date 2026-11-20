@@ -1,15 +1,14 @@
 
 import type { TechnologyProps } from './technologyProps'
-import { useState } from 'react'
 import { toast } from 'react-toastify';
 
 interface TechnologyCardProps {
     technology: TechnologyProps
+    isSelected: boolean
+    onToggle: (technology: TechnologyProps) => void
 }
 
-const TechnologyCard = ({ technology }: TechnologyCardProps) => {
-  const [isAdded, setIsAdded] = useState(false);
-
+const TechnologyCard = ({ technology, isSelected, onToggle }: TechnologyCardProps) => {
   return (
     <li className="group flex flex-col justify-between rounded-2xl
                    border border-gray-200 bg-white p-5
@@ -82,26 +81,24 @@ const TechnologyCard = ({ technology }: TechnologyCardProps) => {
       <button
         type="button"
         onClick={() => {
-          setIsAdded((added) => {
-            if (!added) {
-              toast.success("Added Successfully");
-            }
-            return !added;
-          });
+          if (!isSelected) {
+            toast.success("Added Successfully");
+          }
+          onToggle(technology)
         }}
-        aria-pressed={isAdded}
+        aria-pressed={isSelected}
         className={`w-full rounded-xl px-4 py-3 text-sm font-semibold
                     transition-all duration-300 cursor-pointer
                     focus-visible:outline-2 focus-visible:outline-offset-2
                     focus-visible:outline-pink-500
                     ${
-                      isAdded
+                      isSelected
                         ? "bg-green-100 text-green-700 hover:bg-green-200"
                         : "bg-gray-900 text-white hover:bg-pink-600 hover:shadow-lg"
                     }`
             }
       >
-        {isAdded ? "✓ Added to Stack" : "+ Add to Stack"}
+        {isSelected ? "✓ Added to Stack" : "+ Add to Stack"}
       </button>
 
     </li>
